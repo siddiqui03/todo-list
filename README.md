@@ -17,7 +17,7 @@ A simple Todo application built with React. Manage your todos with features for 
 - **Bootstrap**: CSS framework for responsive design.
 
 ## Live Demo
-Check out the live demo of the app: Todo App
+Check out the live demo of the app: [Todo App](https://todo-list-ebon-phi-50.vercel.app/)
 
 ## Installation
 1. **Clone the Repository**: git clone <repository-URL>
