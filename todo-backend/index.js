@@ -10,7 +10,7 @@ connectDB();
 
 // CORS setup for Vercel frontend
 app.use(cors({
-  origin: 'http://localhost:3000', // Replace with your actual frontend deployment URL
+  origin: 'https://todo-list-frontend-qqq2i5s2s-alizeh-siddiquis-projects.vercel.app/', // Replace with your actual frontend deployment URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
