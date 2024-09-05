@@ -20,12 +20,12 @@ A simple Todo application built with React. Manage your todos with features for 
 Check out the live demo of the app: [Todo App](https://todo-list-ebon-phi-50.vercel.app/)
 
 ## Installation
-1. **Clone the Repository**: git clone <repository-URL>
-2. **Navigate to the Project Directory**: cd <project-directory>
-3. **Install Dependencies**: npm install
-4. **Start the Development Server**: npm start
-5. **Visit the App**: Open http://localhost:3000 in your browser.
-
+1. **Clone the Repository**: `git clone <repository-URL>`
+2. **Navigate to the Project Directory**: `cd <project-directory>`
+3. **Install Dependencies**: `npm install`
+4. **Start the Development Server**: `npm start`
+5. **Visit the App**: Open [http://localhost:3000](http://localhost:3000) in your browser.
+   
 ## Usage
 1. **Sign Up**: Create a new account to access the todo features.
 2. **Log In**: Access your todos with your credentials.
