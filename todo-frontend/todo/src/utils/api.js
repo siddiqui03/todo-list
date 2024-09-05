@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://todo-list-api-jet.vercel.app/', // Update with your backend URL
+  baseURL: 'https://todo-list-api-jet.vercel.app/api', // Update with your backend URL
 });
 
 // Add token to request headers if available
