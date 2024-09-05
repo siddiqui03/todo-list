@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 91vh;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 60px;
+  height: auto;
+  align-self: center;
+  width: 600px; /* Keep width the same */
+  background: #fff;
+  box-sizing: border-box; /* Include padding in container width */
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.text {
+  color: #037089;
+  font-size: 48px; /* Keep font size the same */
+  font-weight: 700;
+}
+
+.underline {
+  width: 61px;
+  height: 6px;
+  background: #037089;
+  border-radius: 9px;
+}
+
+.inputs {
+  display:flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 55px;
+  width: 100%;
+  padding: 15px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 100%; /* Full width to fit container */
+  max-width: 480px; /* Maintain max-width to keep original design */
+  height: 80px;
+  background: #eaeaea;
+  border-radius: 6px;
+  padding: 0 15px; /* Add padding to keep the gap from left and right */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.input img {
+  margin: 0px 15px; /* Adjust margin for consistent spacing */
+}
+
+.input input {
+  height: 50px;
+  width: calc(100% - 60px); /* Full width within the input container, accounting for padding and image */
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #797979;
+  font-size: 19px;
+  padding: 0 10px; /* Add padding for internal spacing */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.submit-container {
+  display: flex;
+  gap: 30px;
+  margin: 60px auto;
+  flex-wrap: wrap; /* Allow buttons to wrap if needed */
+  justify-content: center; /* Center buttons */
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px; /* Fixed width to keep original shape */
+  height: 59px; /* Fixed height to keep original shape */
+  color: #fff;
+  background-color: #037089;
+  border: none;
+  border-radius: 50px; /* Rounded corners */
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.gray {
+  background: #eaeaea;
+  color: #676767;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 100%; /* Full width to fit container */
+  max-width: 480px; /* Maintain max-width to keep original design */
+  height: 60px;
+  outline: none;
+  color: rgba(255, 0, 0, 0.763);
+  font-size: 19px;
+  margin-top: 10px;
+  padding: 25px;
+  border-radius: 4px;
+  background-color: #ffe6e6; /* Light red background */
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  .container {
+    width: 90%; /* Adjust container width for smaller screens */
+  }
+
+  .input, .error-message {
+    width: 100%; /* Ensure inputs and error messages are responsive */
+    max-width: none; /* Remove max-width to fit container */
+  }
+
+  .submit-container {
+    flex-direction: row; /* Keep buttons on the same line */
+    gap: 20px; /* Adjust gap between buttons */
+    justify-content: center; /* Center buttons */
+  }
+
+  .submit {
+    width: 220px; /* Maintain original button width */
+    max-width: 100%; /* Ensure button width is responsive */
+  }
+
+  .text {
+    font-size: 36px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    font-size: 28px; /* Further adjust font size for very small screens */
+  }
+
+  .input {
+    flex-direction: column; /* Stack input elements vertically */
+    padding: 0 10px; /* Reduce padding for very small screens */
+  }
+
+  .input img {
+    margin: 10px 0; /* Adjust image margin for small screens */
+  }
+}
