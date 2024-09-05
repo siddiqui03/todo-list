@@ -18,7 +18,7 @@ const App = () => {
       const token = localStorage.getItem('token');
       if (token) {
         try {
-          await API.get('https://todo-list-api-jet.vercel.app'); // Replace with backend URL
+          await API.get('https://todo-list-api-jet.vercel.app/'); // Replace with backend URL
           setIsAuthenticated(true);
         } catch (err) {
           localStorage.removeItem('token');
