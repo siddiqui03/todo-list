@@ -10,7 +10,7 @@ connectDB();
 
 // CORS setup for Vercel frontend
 app.use(cors({
-  origin: 'https://todo-list-ebon-phi-50.vercel.app/', // Replace with your actual frontend deployment URL
+  origin: 'https://todo-list-ebon-phi-50.vercel.app', // Replace with your actual frontend deployment URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
