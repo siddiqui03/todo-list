@@ -63,7 +63,7 @@ const Login = ({ onSwitchToSignup, onLoginSuccess }) => {
         </div>
         {error && <div className='error-message'>{error}</div>}
         <div className='submit-container'>
-          <button type='submit' className='submit purple'>
+          <button type='submit' className='submit'>
             Login
           </button>
           <div className='submit gray' onClick={onSwitchToSignup}>
