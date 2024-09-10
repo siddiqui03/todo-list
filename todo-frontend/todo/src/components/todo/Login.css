@@ -69,9 +69,11 @@ code {
 }
 
 .input img {
-  margin-right: 15px;
-  width: 30px; /* Ensure icon size is consistent */
+  width: 24px; /* Reduce the width slightly */
+  height: 24px; /* Reduce the height slightly */
+  margin: 0 10px; /* Adjust the margin to keep spacing balanced */
 }
+
 
 .input input {
   height: 50px;
