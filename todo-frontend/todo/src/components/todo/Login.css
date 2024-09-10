@@ -69,8 +69,8 @@ code {
 }
 
 .input img {
-  width: 24px; /* Reduce the width slightly */
-  height: 24px; /* Reduce the height slightly */
+  width: 20px; /* Reduce the width slightly */
+  height: 20px; /* Reduce the height slightly */
   margin: 0 10px; /* Adjust the margin to keep spacing balanced */
 }
 
