@@ -1,7 +1,8 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 91vh;
@@ -18,9 +19,9 @@ code {
   margin-top: 60px;
   height: auto;
   align-self: center;
-  width: 600px; /* Maintain consistent width */
+  width: 600px;
   background: #fff;
-  box-sizing: border-box; /* Include padding in container width */
+  box-sizing: border-box;
 }
 
 .header {
@@ -34,7 +35,7 @@ code {
 
 .text {
   color: #037089;
-  font-size: 48px; /* Keep font size consistent */
+  font-size: 48px;
   font-weight: 700;
 }
 
@@ -58,8 +59,8 @@ code {
   display: flex;
   align-items: center;
   margin: auto;
-  width: 100%; /* Full width */
-  max-width: 480px; /* Maintain original design max-width */
+  width: 100%;
+  max-width: 480px;
   height: 80px;
   background: #eaeaea;
   border-radius: 6px;
@@ -68,12 +69,13 @@ code {
 }
 
 .input img {
-  margin: 0px 15px;
+  margin-right: 15px;
+  width: 30px; /* Ensure icon size is consistent */
 }
 
 .input input {
   height: 50px;
-  width: calc(100% - 60px); /* Full width minus padding and image */
+  width: 100%;
   background: transparent;
   border: none;
   outline: none;
@@ -87,7 +89,7 @@ code {
   display: flex;
   gap: 30px;
   margin: 60px auto;
-  flex-wrap: wrap; /* Allow buttons to wrap */
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -95,15 +97,16 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 220px; /* Fixed width */
-  height: 59px; /* Fixed height */
+  width: 220px;
+  height: 59px;
   color: #fff;
   background-color: #037089;
   border: none;
-  border-radius: 50px; /* Rounded button */
+  border-radius: 50px;
   font-size: 19px;
   font-weight: 700;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .gray {
@@ -115,7 +118,7 @@ code {
   display: flex;
   align-items: center;
   margin: auto;
-  width: 100%; /* Full width */
+  width: 100%;
   max-width: 480px;
   height: 60px;
   outline: none;
@@ -124,17 +127,18 @@ code {
   margin-top: 10px;
   padding: 25px;
   border-radius: 4px;
-  background-color: #ffe6e6; /* Light red background */
+  background-color: #ffe6e6;
 }
 
+/* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
   .container {
-    width: 90%; /* Adjust for smaller screens */
+    width: 90%;
   }
 
   .input, .error-message {
     width: 100%;
-    max-width: none; /* Remove max-width for smaller screens */
+    max-width: none;
   }
 
   .submit-container {
@@ -145,24 +149,46 @@ code {
 
   .submit {
     width: 220px;
+    max-width: 100%;
   }
 
   .text {
-    font-size: 36px; /* Adjust for smaller screens */
+    font-size: 36px;
   }
 }
 
 @media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
   .text {
-    font-size: 28px; /* Adjust for very small screens */
+    font-size: 28px;
   }
 
   .input {
-    flex-direction: column; /* Stack input elements */
+    flex-direction: row;
+    height: auto; /* Allow the input field to adjust height */
     padding: 0 10px;
   }
 
   .input img {
-    margin: 10px 0;
+    width: 25px; /* Smaller icon size */
+    margin-right: 10px;
+  }
+
+  .input input {
+    width: calc(100% - 40px); /* Adjusted width to leave space for the icon */
+    font-size: 17px; /* Slightly smaller font for mobile screens */
+  }
+
+  .error-message {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  .submit-container {
+    flex-direction: column;
+    gap: 15px;
   }
 }
