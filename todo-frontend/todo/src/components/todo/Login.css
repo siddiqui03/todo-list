@@ -1,97 +1,195 @@
-/* login.css */
-
-/* General styles for larger screens */
-* {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+body {
   margin: 0;
-  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 91vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 60px;
+  height: auto;
+  align-self: center;
+  width: 600px;
+  background: #fff;
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
-  background: linear-gradient(#f0f0f0, #e0e0e0); /* Adjust gradient colors as needed */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.text {
+  color: #037089;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.underline {
+  width: 61px;
+  height: 6px;
+  background: #037089;
+  border-radius: 9px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 55px;
+  width: 100%;
+  padding: 15px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  max-width: 480px;
+  height: 80px;
+  background: #eaeaea;
+  border-radius: 6px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.input img {
+  margin-right: 15px;
+  width: 20px;
+}
+
+
+.input input {
+  height: 50px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #797979;
+  font-size: 19px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.submit-container {
+  display: flex;
+  gap: 30px;
+  margin: 60px auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.submit {
   display: flex;
   justify-content: center;
-  align-items: center; /* Center vertically */
-}
-
-.App {
-  text-align: center;
-}
-
-.login-container {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 400px; /* Adjust max width as needed */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
-}
-
-.login-form {
-  width: 100%;
-}
-
-.input-field {
-  outline: none;
-  background: none;
-  border: 1px solid #037089;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  width: 100%; /* Full width for input */
-  height: 50px;
-  color: #797979;
-}
-
-.input-field::placeholder {
-  color: #797979;
-}
-
-.submit-btn {
-  background: #037089;
+  align-items: center;
+  width: 220px;
+  height: 59px;
   color: #fff;
+  background-color: #037089;
   border: none;
-  padding: 0.75rem;
-  height: 50px;
+  border-radius: 50px;
+  font-size: 19px;
+  font-weight: 700;
   cursor: pointer;
-  width: 100%; /* Full width for button */
-  border-radius: 5px;
+  white-space: nowrap;
 }
 
-.submit-btn:hover {
-  background: #025f6f; /* Darken color on hover */
+.gray {
+  background: #eaeaea;
+  color: #676767;
 }
 
-/* Responsive styles for smaller screens */
+.error-message {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  max-width: 480px;
+  height: 60px;
+  outline: none;
+  color: rgba(255, 0, 0, 0.763);
+  font-size: 19px;
+  margin-top: 10px;
+  padding: 25px;
+  border-radius: 4px;
+  background-color: #ffe6e6;
+}
+
+/* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
-  .login-container {
-    width: 90%; /* Adjust width for smaller screens */
-    padding: 1rem;
+  .container {
+    width: 90%;
   }
 
-  .input-field {
-    font-size: 14px; /* Adjust font size */
+  .input, .error-message {
+    width: 100%;
+    max-width: none;
   }
 
-  .submit-btn {
-    height: 45px; /* Adjust height */
+  .submit-container {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .submit {
+    width: 220px;
+    max-width: 100%;
+  }
+
+  .text {
+    font-size: 36px;
   }
 }
 
 @media (max-width: 480px) {
-  .login-container {
-    width: 95%; /* Further adjust width for very small screens */
+  .container {
+    width: 100%;
   }
 
-  .input-field {
-    font-size: 12px; /* Further adjust font size */
-    padding: 0.5rem; /* Adjust padding */
+  .text {
+    font-size: 28px;
   }
 
-  .submit-btn {
-    height: 40px; /* Further adjust height */
+  .input {
+    flex-direction: row;
+    height: auto; /* Allow the input field to adjust height */
+    padding: 0 10px;
+  }
+
+  .input img {
+    width: 25px; /* Smaller icon size */
+    margin-right: 10px;
+  }
+
+  .input input {
+    width: calc(100% - 40px); /* Adjusted width to leave space for the icon */
+    font-size: 17px; /* Slightly smaller font for mobile screens */
+  }
+
+  .error-message {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  .submit-container {
+    flex-direction: column;
+    gap: 15px;
   }
 }
-
