@@ -14,7 +14,7 @@ body {
   background: linear-gradient(#033d4a, rgb(48, 121, 137));
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 
 .App {
