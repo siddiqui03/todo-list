@@ -1,5 +1,4 @@
-// Login.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Login.css';
 import emailIcon from '../assets/email.png';
 import passwordIcon from '../assets/password.png';
@@ -31,6 +30,16 @@ const Login = ({ onSwitchToSignup, onLoginSuccess }) => {
       );
     }
   };
+
+  // Apply the login-body class to the body tag when the component mounts
+  useEffect(() => {
+    document.body.className = 'login-body';
+
+    return () => {
+      // Cleanup the class when the component unmounts
+      document.body.className = '';
+    };
+  }, []);
 
   return (
     <div className='container'>
