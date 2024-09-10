@@ -14,7 +14,8 @@ body {
   background: linear-gradient(#033d4a, rgb(48, 121, 137));
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center; /* Center vertically */
+  padding: 1rem; /* Add padding to ensure the container doesn’t touch the edges */
 }
 
 .App {
@@ -48,10 +49,11 @@ h1 {
 
 .TodoWrapper {
   background: #fff;
-  margin-top: 5rem;
   padding: 2rem;
   border-radius: 5px;
-  width: 600px;
+  width: 100%;
+  max-width: 600px; /* Adjust max-width for larger screens */
+  margin: 0 auto; /* Center horizontally */
 }
 
 .TodoForm {
@@ -66,7 +68,8 @@ h1 {
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
-  width: 460px;
+  width: 100%; /* Full width for input */
+  max-width: 460px; /* Adjust max-width */
   height: 50px;
   color: #797979;
 }
@@ -82,6 +85,8 @@ h1 {
   padding: 0.55rem;
   height: 50px;
   cursor: pointer;
+  width: 100%; /* Full width for button */
+  max-width: 460px; /* Adjust max-width */
 }
 
 .Todo {
@@ -125,26 +130,17 @@ h1 {
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   .TodoWrapper {
-    width: 90%; /* Adjust width for smaller screens */
     padding: 1rem;
+    width: 90%; /* Adjust width for smaller screens */
   }
 
   h1 {
     font-size: 36px; /* Adjust font size for smaller screens */
   }
 
-  .todo-input {
-    width: 100%; /* Full width for input */
-  }
-
+  .todo-input,
   .todo-btn {
-    width: 100%; /* Full width for button */
-    padding: 0.55rem 0;
-  }
-
-  .logout-button img {
-    width: 20px; /* Adjust size for smaller screens */
-    height: 20px;
+    max-width: 100%; /* Full width for input and button */
   }
 }
 
@@ -153,11 +149,8 @@ h1 {
     font-size: 28px; /* Further adjust font size for very small screens */
   }
 
-  .todo-input {
-    padding: 0.5rem; /* Adjust padding */
-  }
-
+  .todo-input,
   .todo-btn {
-    height: 45px; /* Adjust height */
+    max-width: 100%; /* Full width for input and button */
   }
 }
